@@ -72,7 +72,7 @@ jobs:
 
       - name: Copy testconfig.yml
         run: cp tests/testconfig.yml build/testconfig.yml
-        
+
       - name: Download test executable
         uses: actions/download-artifact@v4
         with:
@@ -80,7 +80,7 @@ jobs:
           path: build
 
       - name: Change test executable permission
-        run: chmod +x testsidemade
+        run: chmod +x build/testsidemade
 
       - name: Install libraries
         run: sudo apt-get install libboost-all-dev libyaml-cpp-dev 
