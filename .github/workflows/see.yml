@@ -16,7 +16,12 @@ jobs:
         run: sudo apt-get install -y clang-format
 
       - name: Run clang-format
-        run: clang-format src/*.cpp src/*.hpp tests/*.cpp tests/*.hpp --dry-run -Werror
+        run: |
+        files=$(find src tests -type f \( -name "*.cpp" -o -name "*.hpp" \) -exec clang-format --dry-run --Werror {} + 2>&1 | tee /dev/stderr)
+          if [ -n "$files" ]; then
+            echo "Some files are not formatted correctly
+            exit 1
+          fi
 
   build:
     runs-on: ubuntu-latest
