@@ -69,6 +69,8 @@ jobs:
         with:
           name: testsidemade-exe
           path: .
+      - name: ls
+        run: ls
       - name: Run test executable
         run: testsidemade
         
