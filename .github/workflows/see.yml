@@ -69,8 +69,8 @@ jobs:
         with:
           name: testsidemade-exe
           path: .
-      - name: ls
-        run: ls
+      - name: Change test executable permission
+        run: chmod +x testsidemade
       - name: Run test executable
         run: ./testsidemade
         
