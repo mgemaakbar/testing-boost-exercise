@@ -24,13 +24,12 @@ jobs:
 
       - name: Extract Tar.gz file
         run: tar -xzvf source.tar.gz -C eigen3
-      - name: List extracted files
-        run: ls -R extracted-folder
+
       - name: Create build directory
         run: mkdir build
 
       - name: Run CMake
-        run: cmake ..
+        run: cmake -DEIGEN3_INCLUDE_DIR=eigen3 ..
         working-directory: build
 
       - name: Build project
