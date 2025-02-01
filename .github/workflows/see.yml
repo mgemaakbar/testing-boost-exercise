@@ -25,6 +25,9 @@ jobs:
       - name: Extract Tar.gz file
         run: tar -xzvf source.tar.gz -C eigen3
 
+      - name: Check pwd
+        run: pwd
+
       - name: Create build directory
         run: mkdir build
 
