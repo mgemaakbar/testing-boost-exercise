@@ -71,6 +71,8 @@ jobs:
           path: .
       - name: Change test executable permission
         run: chmod +x testsidemade
+      - name: Install Boost
+        run: sudo apt-get install libboost-all-dev
       - name: Run test executable
         run: ./testsidemade
         
