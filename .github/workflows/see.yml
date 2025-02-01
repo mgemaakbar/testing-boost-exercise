@@ -72,7 +72,7 @@ jobs:
       - name: ls
         run: ls
       - name: Run test executable
-        run: testsidemade
+        run: ./testsidemade
         
 
 
