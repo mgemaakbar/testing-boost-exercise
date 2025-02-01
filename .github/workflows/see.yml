@@ -6,6 +6,18 @@ on:
       - '**'
 
 jobs:
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install clang-format
+        run: sudo apt-get install -y clang-format
+
+      - name: Run clang-format
+        run: clang-format src/*.cpp src/*.hpp tests/*.cpp tests/*.hpp --dry-run -Werror
+
   build:
     runs-on: ubuntu-latest
 
@@ -16,23 +28,14 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y cmake make g++ libyaml-cpp-dev libboost-all-dev
 
-      - name: Check cmake version
-        run: cmake --version
-
-      - name: Check make version
-        run: make --version
-
-      - name: Download Tar.gz file
+      - name: Download Eigen source
         run: wget -O source.tar.gz "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz"
 
       - name: Create eigen3 directory
         run: mkdir eigen3
 
-      - name: Extract Tar.gz file
+      - name: Extract Eigen source
         run: tar -xzvf source.tar.gz -C eigen3
-
-      - name: Check pwd
-        run: pwd
 
       - name: Create build directory
         run: mkdir build
