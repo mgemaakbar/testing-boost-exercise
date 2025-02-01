@@ -32,7 +32,7 @@ jobs:
         run: mkdir build
 
       - name: Run CMake
-        run: cmake -DEIGEN3_INCLUDE_DIR=eigen3 ..
+        run: cmake -DEIGEN3_INCLUDE_DIR=/home/runner/work/testing-boost-exercise/testing-boost-exercise/eigen3 ..
         working-directory: build
 
       - name: Build project
