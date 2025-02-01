@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y cmake make g++ libyaml-cpp-dev libboost-all-dev
 
       - name: Download Tar.gz file
-        run: wget -O source.tar.gz "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.bz2"
+        run: wget -O source.tar.gz "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz"
 
       - name: Create eigen3 directory
         run: mkdir eigen3
