@@ -1,4 +1,4 @@
-name: CMake Build
+name: SEE Boost Test Exercise
 
 on:
   push:
