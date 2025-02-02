@@ -12,7 +12,7 @@ namespace matrixIO {
 void saveData(const string &fileName, const MatrixXd &matrix)
 {
   // see https://eigen.tuxfamily.org/dox/structEigen_1_1IOFormat.html
-  const static IOFormat CSVFormat(FullPrecision, DontAlignCols, ", ", "\n")
+  const static IOFormat CSVFormat(FullPrecision, DontAlignCols, ", ", "\n");
 
   ofstream file(fileName);
   if (file.is_open()) {
