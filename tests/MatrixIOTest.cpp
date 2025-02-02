@@ -18,7 +18,7 @@ struct MatrixIOFixture {
 
 BOOST_FIXTURE_TEST_SUITE(MatrixIOTests, MatrixIOFixture, *boost::unit_test::tolerance(1e-6))
 
-BOOST_AUTO_TEST_CASE(Hoho)
+BOOST_AUTO_TEST_CASE(openDataTest)
 {
 
   MatrixXd resultMatrix = openData("../data/m3.csv", 3);
