@@ -10,9 +10,8 @@ struct MatrixIOFixture {
   {
     expectedMatrix = MatrixXd(3, 3);
     expectedMatrix << 0.680375, 0.59688, -0.329554,
-      -0.211234, 0.823295, 0.536459,
-      0.566198, -0.604897, -0.444451;
-
+        -0.211234, 0.823295, 0.536459,
+        0.566198, -0.604897, -0.444451;
   }
   MatrixXd expectedMatrix;
 };
