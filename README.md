@@ -71,3 +71,5 @@ You can format the code base using [clang-format](https://clang.llvm.org/docs/Cl
 ```bash
 $ clang-format -i src/*
 ```
+
+![SSE CI/CD](https://github.com/mgemaakbar/testing-boost-exercise/actions/workflows/sse.yml/badge.svg)
