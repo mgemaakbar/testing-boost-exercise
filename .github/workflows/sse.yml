@@ -46,7 +46,7 @@ jobs:
         run: mkdir build
 
       - name: Run CMake
-        run: cmake -DEIGEN3_INCLUDE_DIR=/home/runner/work/testing-boost-exercise/testing-boost-exercise/eigen3/eigen-3.4.0 ..
+        run: cmake -DEIGEN3_INCLUDE_DIR=$(pwd)/../eigen3/eigen-3.4.0 ..
         working-directory: build
 
       - name: Build project
